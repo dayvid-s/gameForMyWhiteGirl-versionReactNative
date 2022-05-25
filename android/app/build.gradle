@@ -1,6 +1,6 @@
 apply plugin: "com.android.application"
 
-import com.android.build.OutputFile
+import com.android.OutputFile
 import org.apache.tools.ant.taskdefs.condition.Os
 
 /**
@@ -83,6 +83,10 @@ project.ext.react = [
 ]
 
 apply from: "../../node_modules/react-native/react.gradle"
+
+
+apply from: "../../node_modules/react-native-vector-icons/fonts.gradle"
+
 
 /**
  * Set this to true to create two separate APKs instead of one:
@@ -193,9 +197,9 @@ android {
         afterEvaluate {
             // If you wish to add a custom TurboModule or component locally,
             // you should uncomment this line.
-            // preBuild.dependsOn("generateCodegenArtifactsFromSchema")
-            preDebugBuild.dependsOn(packageReactNdkDebugLibs)
-            preReleaseBuild.dependsOn(packageReactNdkReleaseLibs)
+            // predependsOn("generateCodegenArtifactsFromSchema")
+            preDebugdependsOn(packageReactNdkDebugLibs)
+            preReleasedependsOn(packageReactNdkReleaseLibs)
 
             // Due to a bug inside AGP, we have to explicitly set a dependency
             // between configureNdkBuild* tasks and the preBuild tasks.
