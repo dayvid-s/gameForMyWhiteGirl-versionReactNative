@@ -6,13 +6,21 @@ import {
   View,
 } from 'react-native';
 import  InitialPart from './componentes/InitialPart'
+import {NavigationContainer} from "@react-navigation/native"
+import { createStackNavigator } from "@react-navigation/stack"
+import truth from './componentes/truth';
+const Stack = createStackNavigator()
 
 export default function (){
   return(
-    <View>
-    <InitialPart></InitialPart>
-    <Text>warup</Text>
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName='truth'
+        screenOptions={{headerShown: false}}>
+        <Stack.Screen name='InitialPart' component={InitialPart} />
+        <Stack.Screen name='truth' component={truth} />
+      </Stack.Navigator>
+        
+    </NavigationContainer>
     )}
 
 const styles = StyleSheet.create({

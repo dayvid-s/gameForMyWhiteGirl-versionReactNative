@@ -7,32 +7,30 @@ import {
 } from 'react-native';
 
 
-export default function ({navigation}){
+export default function (truth){
   return( 
   <View style={styles.container} >
       <View style={{height: ('5%')}} > 
         <Text style={styles.lettersOne}  >Dayvid</Text>
-        <Text style={{  alignSelf:'center'}} >_________</Text>
         <Text style={styles.lettersTwo} >HARD</Text>
     </View>
        <View style={{justifyContent:'space-evenly'}}  >
  
-       <TouchableOpacity onPress={()=> navigation.push('truth')} >
+       <View >
          <Text style={styles.lettersThree} 
          >TRUTH
          </Text>    
-       </TouchableOpacity>
-       <Text style={{  alignSelf:'center'}} >  _________</Text>
-       <Text style={{fontSize:28,textAlign:'center',color:('#De2674'), fontWeight:('300')}}
-            >RANDOM CHANCE</Text>
-       <Text style={{  alignSelf:'center'}} >  _________</Text>
-       <Text style={styles.lettersThree}>DARE</Text>
+       </View>
+       <Text style={{  alignSelf:'center',color:('#De2674')}} >  _________</Text>
+       <Text style={{fontSize:28,textAlign:'center', }}
+            >What would you like to do with a partner if you could erase her memory?</Text>
+       <Text style={{  alignSelf:'center',color:('#De2674')}} >  _________</Text>
      </View>
      
      <View style={{flexDirection:'row'}} >
           <Text style={{fontSize:25, textAlign:'center', color:'white', width:'80%',
         fontWeight:'300'
-        }}>Include "Custom"?</Text>
+        }}>Include "Custom"?  emoji 1 emoji 2</Text>
      </View>
 
   </View>
@@ -69,12 +67,3 @@ const styles = StyleSheet.create({
 
 }
 });
-// cara é muito melhor de aprender, quando você mesmo começa a fazer a parada sem copiar de video aula
-// nem nada, você erra,e ja sabe do seu erro, não do erro dos outros, isso é foda.
-// nunca esqueça disso.
-
-// ULTRA IMPORTANTE. 
-// um monte de download de pacote não da certo porque você tá com o metro a todo vapor.
-// sempre que for instalar pacotes, faça o ctrl C para terminar o metro, e instalar os pacotes
-// porque senão da merda no app. deve ter sido por isso que não instalava as dependencias
-// do app lá
