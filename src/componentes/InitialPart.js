@@ -17,7 +17,7 @@ export default function ({navigation}){
     </View>
        <View style={{justifyContent:'space-evenly'}}  >
  
-       <TouchableOpacity onPress={()=> navigation.push('truth')} >
+       <TouchableOpacity onPress={()=> navigation.push('Truth')} >
          <Text style={styles.lettersThree} 
          >TRUTH
          </Text>    

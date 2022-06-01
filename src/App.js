@@ -8,16 +8,16 @@ import {
 import  InitialPart from './componentes/InitialPart'
 import {NavigationContainer} from "@react-navigation/native"
 import { createStackNavigator } from "@react-navigation/stack"
-import truth from './componentes/truth';
+import Truth from './componentes/Truth';
 const Stack = createStackNavigator()
 
 export default function (){
   return(
     <NavigationContainer>
-      <Stack.Navigator initialRouteName='truth'
+      <Stack.Navigator initialRouteName='InitialPart'
         screenOptions={{headerShown: false}}>
         <Stack.Screen name='InitialPart' component={InitialPart} />
-        <Stack.Screen name='truth' component={truth} />
+        <Stack.Screen name='Truth' component={Truth} />
       </Stack.Navigator>
         
     </NavigationContainer>

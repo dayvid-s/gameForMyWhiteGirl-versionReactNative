@@ -5,13 +5,16 @@ import {
   View,
   TouchableOpacity
 } from 'react-native';
-
+import Icon from 'react-native-vector-icons/AntDesign'
 
 export default function (truth){
   return( 
   <View style={styles.container} >
       <View style={{height: ('5%')}} > 
         <Text style={styles.lettersOne}  >Dayvid</Text>
+        <TouchableOpacity>
+           <Icon name='left' size={30} color='#ff09de'/>
+        </TouchableOpacity>
         <Text style={styles.lettersTwo} >HARD</Text>
     </View>
        <View style={{justifyContent:'space-evenly'}}  >
@@ -21,16 +24,22 @@ export default function (truth){
          >TRUTH
          </Text>    
        </View>
-       <Text style={{  alignSelf:'center',color:('#De2674')}} >  _________</Text>
+       <Text style={{  alignSelf:'center',color:('#De2674')}} >  ______________</Text>
        <Text style={{fontSize:28,textAlign:'center', }}
             >What would you like to do with a partner if you could erase her memory?</Text>
-       <Text style={{  alignSelf:'center',color:('#De2674')}} >  _________</Text>
-     </View>
+       <Text style={{  alignSelf:'center',color:('#De2674')}} >  ______________</Text>
+       </View>
      
-     <View style={{flexDirection:'row'}} >
-          <Text style={{fontSize:25, textAlign:'center', color:'white', width:'80%',
-        fontWeight:'300'
-        }}>Include "Custom"?  emoji 1 emoji 2</Text>
+     <View style={{flexDirection:'row', alignSelf:'center', justifyContent:'space-between'  } } >
+        <View style={{right:20}}  >
+          <Icon name='reload1' size={70} color='#ff09de' />
+        </View>
+        <View>
+           <Icon name='caretright' size={70} color='#ff09de'/>
+        </View>
+        <View style={{left:20}}>
+          <Icon name='pluscircle' size={70} color='#ff09de' />
+        </View>
      </View>
 
   </View>
@@ -45,7 +54,7 @@ const styles = StyleSheet.create({
     justifyContent:'space-between'
     
   },
-  lettersOne:{
+  lettersOne:{  
       fontSize:30,
       color:('#ff09de'),
       alignSelf:'center',
